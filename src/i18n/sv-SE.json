@@ -1,0 +1,45 @@
+{
+  "grid": {
+    "EmptyRecord": "Inga poster att visa",
+    "True": "Ja",
+    "False": "Nej",
+    "Search": "Sök",
+    "Matchs": "Inga träffar",
+    "FilterButton": "Filtrera",
+    "ClearButton": "Rensa",
+    "SelectAll": "Välj alla",
+    "Blanks": "Tomma",
+    "Add": "Lägg till",
+    "Edit": "Redigera",
+    "Delete": "Ta bort",
+    "Update": "Uppdatera",
+    "Cancel": "Avbryt",
+    "Save": "Spara",
+    "OKButton": "OK",
+    "ConfirmDelete": "Är du säker på att du vill ta bort posten?",
+    "EditOperationAlert": "Ingen post vald för redigering",
+    "DeleteOperationAlert": "Ingen post vald för borttagning"
+  },
+  "pager": {
+    "currentPageInfo": "{0} av {1} sidor",
+    "totalItemsInfo": "({0} poster)",
+    "firstPageTooltip": "Gå till första sidan",
+    "lastPageTooltip": "Gå till sista sidan",
+    "nextPageTooltip": "Gå till nästa sida",
+    "previousPageTooltip": "Gå till föregående sida",
+    "pagerDropDown": "Poster per sida"
+  },
+  "dialog": {
+    "close": "Stäng"
+  },
+  "datepicker": {
+    "placeholder": "Välj datum",
+    "today": "Idag"
+  },
+  "calendar": {
+    "today": "Idag"
+  },
+  "dropdowns": {
+    "noRecordsTemplate": "Inga poster hittades"
+  }
+}

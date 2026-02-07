@@ -1,0 +1,45 @@
+{
+  "grid": {
+    "EmptyRecord": "Keine Datensätze anzuzeigen",
+    "True": "Ja",
+    "False": "Nein",
+    "Search": "Suchen",
+    "Matchs": "Keine Treffer",
+    "FilterButton": "Filtern",
+    "ClearButton": "Löschen",
+    "SelectAll": "Alle auswählen",
+    "Blanks": "Leer",
+    "Add": "Hinzufügen",
+    "Edit": "Bearbeiten",
+    "Delete": "Löschen",
+    "Update": "Aktualisieren",
+    "Cancel": "Abbrechen",
+    "Save": "Speichern",
+    "OKButton": "OK",
+    "ConfirmDelete": "Sind Sie sicher, dass Sie den Datensatz löschen möchten?",
+    "EditOperationAlert": "Kein Datensatz zur Bearbeitung ausgewählt",
+    "DeleteOperationAlert": "Kein Datensatz zum Löschen ausgewählt"
+  },
+  "pager": {
+    "currentPageInfo": "{0} von {1} Seiten",
+    "totalItemsInfo": "({0} Einträge)",
+    "firstPageTooltip": "Zur ersten Seite",
+    "lastPageTooltip": "Zur letzten Seite",
+    "nextPageTooltip": "Zur nächsten Seite",
+    "previousPageTooltip": "Zur vorherigen Seite",
+    "pagerDropDown": "Einträge pro Seite"
+  },
+  "dialog": {
+    "close": "Schließen"
+  },
+  "datepicker": {
+    "placeholder": "Datum wählen",
+    "today": "Heute"
+  },
+  "calendar": {
+    "today": "Heute"
+  },
+  "dropdowns": {
+    "noRecordsTemplate": "Keine Datensätze gefunden"
+  }
+}
