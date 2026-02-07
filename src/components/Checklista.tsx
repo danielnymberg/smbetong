@@ -303,6 +303,16 @@ export function Checklista() {
           close={() => setNySatsDialog(false)}
           header={t.actions.nySats}
           showCloseIcon={true}
+          footerTemplate={() => (
+            <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
+              <button className="e-btn" onClick={() => setNySatsDialog(false)}>
+                {t.actions.avbryt}
+              </button>
+              <button className="e-btn e-primary" onClick={handleSkapaSats}>
+                {t.actions.nySats}
+              </button>
+            </div>
+          )}
         >
           <div style={{ padding: '16px' }}>
             {recept.length > 0 && (
@@ -321,15 +331,6 @@ export function Checklista() {
                 />
               </div>
             )}
-
-            <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end', marginTop: '24px' }}>
-              <button className="e-btn" onClick={() => setNySatsDialog(false)}>
-                {t.actions.avbryt}
-              </button>
-              <button className="e-btn e-primary" onClick={handleSkapaSats}>
-                {t.actions.nySats}
-              </button>
-            </div>
           </div>
         </DialogComponent>
       )}
@@ -343,6 +344,23 @@ export function Checklista() {
           close={() => setAvvikelseDialog({ open: false, kontrollpunkt: null })}
           header={t.checklista.anmarkning}
           showCloseIcon={true}
+          footerTemplate={() => (
+            <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
+              <button
+                className="e-btn"
+                onClick={() => setAvvikelseDialog({ open: false, kontrollpunkt: null })}
+              >
+                {t.actions.avbryt}
+              </button>
+              <button
+                className="e-btn e-danger"
+                onClick={handleSparaAvvikelse}
+                disabled={!avvikelseText.trim()}
+              >
+                {t.actions.spara}
+              </button>
+            </div>
+          )}
         >
           <div style={{ padding: '16px' }}>
             <p style={{ marginTop: 0 }}>
@@ -358,22 +376,6 @@ export function Checklista() {
               cssClass="e-outline"
               floatLabelType="Auto"
             />
-
-            <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end', marginTop: '24px' }}>
-              <button
-                className="e-btn"
-                onClick={() => setAvvikelseDialog({ open: false, kontrollpunkt: null })}
-              >
-                {t.actions.avbryt}
-              </button>
-              <button
-                className="e-btn e-danger"
-                onClick={handleSparaAvvikelse}
-                disabled={!avvikelseText.trim()}
-              >
-                {t.actions.spara}
-              </button>
-            </div>
           </div>
         </DialogComponent>
       )}

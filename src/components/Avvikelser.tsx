@@ -179,6 +179,20 @@ export function Avvikelser() {
           close={() => setDialogOpen(false)}
           header={t.avvikelser.nyAvvikelse}
           showCloseIcon={true}
+          footerTemplate={() => (
+            <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
+              <button className="e-btn" onClick={() => setDialogOpen(false)}>
+                {t.actions.avbryt}
+              </button>
+              <button
+                className="e-btn e-danger"
+                onClick={handleSkapaAvvikelse}
+                disabled={!nyAvvikelse.beskrivning.trim()}
+              >
+                {t.actions.spara}
+              </button>
+            </div>
+          )}
         >
           <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {satser.length > 0 && (
@@ -206,19 +220,6 @@ export function Avvikelser() {
                 floatLabelType="Auto"
               />
             </div>
-
-            <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end', marginTop: '8px' }}>
-              <button className="e-btn" onClick={() => setDialogOpen(false)}>
-                {t.actions.avbryt}
-              </button>
-              <button
-                className="e-btn e-danger"
-                onClick={handleSkapaAvvikelse}
-                disabled={!nyAvvikelse.beskrivning.trim()}
-              >
-                {t.actions.spara}
-              </button>
-            </div>
           </div>
         </DialogComponent>
       )}
@@ -232,6 +233,16 @@ export function Avvikelser() {
           close={() => setRedigeraDialog(null)}
           header={t.actions.redigera}
           showCloseIcon={true}
+          footerTemplate={() => (
+            <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
+              <button className="e-btn" onClick={() => setRedigeraDialog(null)}>
+                {t.actions.avbryt}
+              </button>
+              <button className="e-btn e-primary" onClick={handleSparaRedigering}>
+                {t.actions.spara}
+              </button>
+            </div>
+          )}
         >
           <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {/* Ursprunglig beskrivning */}
@@ -290,15 +301,6 @@ export function Avvikelser() {
                 cssClass="e-outline"
                 floatLabelType="Auto"
               />
-            </div>
-
-            <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end', marginTop: '8px' }}>
-              <button className="e-btn" onClick={() => setRedigeraDialog(null)}>
-                {t.actions.avbryt}
-              </button>
-              <button className="e-btn e-primary" onClick={handleSparaRedigering}>
-                {t.actions.spara}
-              </button>
             </div>
           </div>
         </DialogComponent>

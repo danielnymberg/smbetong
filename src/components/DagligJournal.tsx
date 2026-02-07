@@ -158,6 +158,20 @@ export function DagligJournal() {
           close={() => setDialogOpen(false)}
           header={t.journal.nyPost}
           showCloseIcon={true}
+          footerTemplate={() => (
+            <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
+              <button className="e-btn" onClick={() => setDialogOpen(false)}>
+                {t.actions.avbryt}
+              </button>
+              <button
+                className="e-btn e-primary"
+                onClick={handleSpara}
+                disabled={!nyPost.rubrik.trim() || !nyPost.beskrivning.trim()}
+              >
+                {t.actions.spara}
+              </button>
+            </div>
+          )}
         >
           <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <div>
@@ -207,19 +221,6 @@ export function DagligJournal() {
                 cssClass="e-outline"
                 floatLabelType="Auto"
               />
-            </div>
-
-            <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end', marginTop: '8px' }}>
-              <button className="e-btn" onClick={() => setDialogOpen(false)}>
-                {t.actions.avbryt}
-              </button>
-              <button
-                className="e-btn e-primary"
-                onClick={handleSpara}
-                disabled={!nyPost.rubrik.trim() || !nyPost.beskrivning.trim()}
-              >
-                {t.actions.spara}
-              </button>
             </div>
           </div>
         </DialogComponent>
